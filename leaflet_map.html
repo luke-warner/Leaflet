@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+	
+	<div class="leaflet-control leaflet-bottom leaflet-left">
+	     <p id="legendTitle">Click on the markers for more information</p>
+	</div>
+	
+	<script>
+	
+        var map = L.map('map').setView([32.36198331510819, -64.77092742919922], 12);
+        mapLink = 
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 25,
+			id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+        
+		}).addTo(map);
+			
+	L.marker([32.2517748, -64.9464522]).bindPopup('Name: 19th Century Ballast Pile, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.2517748, -64.9464522)').addTo(map)
+	
+	L.marker([32.411667, -64.650556]).bindPopup('Name: America, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.411667, -64.650556)').addTo(map)
+		
+	L.marker([32.479, -64.6572833]).bindPopup('Name: Aristo, Built: 1928 in Lorain, Ohio, U.S., Length: 251 feet (76.5 meters), Depth: 50 feet (15.2 meters), sunk: March 1937, Coordinates: (32.479, -64.6572833)').addTo(map)
+		
+	L.marker([32.3126, -64.97485]).bindPopup('Name: Ballast Billy, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.3126, -64.97485)').addTo(map)
+		
+	L.marker([32.5186, -64.91747]).bindPopup('Name: Ballast Billy 2, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.5186, -64.91747)').addTo(map)
+		
+	L.marker([32.2713, -64.97565]).bindPopup('Name: Blanche King, Built: 1887 in Maine, U.S., Length: 192 feet (58 meters) / Width: 42 feet, sunk: December 1920, Coordinates: (32.2713, -64.97565)').addTo(map)
+		
+	L.marker([32.4630833, -64.8350667]).bindPopup('Name: Caraquet, Built: 1894 in Belfast, Northern Ireland, 200 feet (61 meters), Depth: 45 feet (14 meters), sunk: June 1923, Coordinates: (32.4630833, -64.8350667)').addTo(map)
+			
+	L.marker([32.3611833, -64.9139833]).bindPopup('Name: Constellation, Built: 1918, Harrington, Maine, U.S., Length: 190 feet (58 meters), Depth: 26 to 30 feet (8 to 9 meters), sunk: July 1943, Coordinates: (32.3611833, -64.9139833)').addTo(map)
+		
+	L.marker([32.4851167, -64.7199833]).bindPopup('Name: Cristobal Colon, Built: 1923 in Spain, Length: 499 feet (152 meters), Maximum Depth: 60 feet (18.3 meters), sunk: October 1936, Coordinates: (32.4851167, -64.7199833)').addTo(map)
+		
+	L.marker([32.482955, -64.752652]).bindPopup('Name: Curlew, Built: NA, Length: 182 feet (55.5 meters), Maximum Depth: 35 feet (10.6 meters), sunk: March 1856, Coordinates: (32.482955, -64.752652)').addTo(map)
+		
+	L.marker([32.28755, -64.9841833]).bindPopup('Name: Darlington, Built: 1881 in Newcastle, England, Length: 285 feet (87 meters), Maximum Depth: 30 feet (9 meters), sunk: February 1886, Coordinates: (32.28755, -64.9841833)').addTo(map)
+		
+	L.marker([32.4378, -64.838033]).bindPopup('Name: Florida water wreck, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.4378, -64.838033)').addTo(map)
+				
+	L.marker([32.369514, -64.91554]).bindPopup('Name: Fraternite drop, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.369514, -64.91554)').addTo(map)
+			
+	L.marker([32.244495, -64.827417]).bindPopup('Name: Gleana, Built: NA, Length: NA, Maximum Depth: 30 feet (9 meters), sunk: 1900, Coordinates: (32.244495, -64.827417)').addTo(map)
+		
+	L.marker([32.283128, -64.810482]).bindPopup('Name: Irresistible, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.283128, -64.810482)').addTo(map)
+		
+	L.marker([32.3273333, -64.6965333]).bindPopup('Name: Kate, Built: 1874 in Whitby, England, Length: 200 feet (61 meters), Maximum Depth: 45 feet (13.7 meters), sunk: November 1878, Coordinates: (32.3273333, -64.6965333)').addTo(map)
+		
+	L.marker([32.3189667, -64.9760667]).bindPopup('Name: L’Herminie, Built: 1823,  Length: 300 feet (91.4 meters), Depth: 35 feet (10.7 meters), sunk: 1838, Coordinates: (32.3189667, -64.9760667)').addTo(map)
+		
+	L.marker([32.3634833, -64.9131667]).bindPopup('Name: Lartington, Built: 1875 in Sunderland, England,  Length: 245 feet (74.7 meters), Depth: 35 feet (10.7 meters), sunk: December 1879, Coordinates: (32.3634833, -64.9131667)').addTo(map)
+		
+	L.marker([32.4674167, -64.8200333]).bindPopup('Name: Madiana, Built: 1877 in Glasgow, Length: 345 feet (105 meters), Maximum Depth: 25 feet (7.6 meters), sunk: February 1903, Coordinates: (32.4674167, -64.8200333)').addTo(map)
+		
+	L.marker([32.2421167, -64.8321]).bindPopup('Name: Marie Celeste, Built: NA, Length: NA, Maximum Depth: NA, Coordinates: (32.2421167, -64.8321)').addTo(map)
+		
+	L.marker([32.2446333, -64.8086833]).bindPopup('Name: Minnie Breslauer, Built: 1872 in Portugal,  Length: 300 feet (91.5 meters), Depth: 65 feet (20 meters), sunk: 1873, Coordinates: (32.2446333, -64.8086833)').addTo(map)
+		
+	L.marker([32.374283, -64.85733]).bindPopup('Name: MonJuan, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.374283, -64.85733)').addTo(map)
+		
+	L.marker([32.3636167, -64.9135333]).bindPopup('Name: Montana, Built: 1860 in Glasgow, Scotland, Length: 72 meters (236 feet) / Width: 42 feet, Maximum Depth: 12 meters / Maximum Speed: 15 knots, sunk: December 1863, Coordinates: (32.3636167, -64.9135333)').addTo(map)
+		
+	L.marker([32.2616333, -64.9590833]).bindPopup('Name: North Carolina, Built: 1876 in Scotland, Length: 205 feet (62.5 meters), Maximum Depth: 45 feet (13.7 meters), sunk: January 1880, Coordinates: (32.2616333, -64.9590833)').addTo(map)
+		
+	L.marker([32.475308, -64.769015]).bindPopup('Name: North Rock, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.475308, -64.769015)').addTo(map)
+		
+	L.marker([32.3557833, -64.6434333]).bindPopup('Name: Pelinaion, Built: 1907 in Glasgow, Length: 385 feet (117.3 meters), Maximum Depth: 65 feet (20 meters), sunk: January 1940, Coordinates: (32.3557833, -64.6434333)').addTo(map)
+		
+	L.marker([32.2713889, -64.77]).bindPopup('Name: Pollockshields, Built: 1890 in Hamburg, Germany, Length: 323 feet (98.5 meters),  Maximum Depth: 40 feet (12 meters), sunk: August 1915, Coordinates: (32.2713889, -64.77)').addTo(map)
+		
+	L.marker([32.3584167, -64.6415333]).bindPopup('Name: Rita Zovetta, Built: 1919 in Glasgow, Length: 399 feet (121.6 meters), Maximum Depth: 70 feet (21 meters), sunk: February 1924, Coordinates: (32.3584167, -64.6415333)').addTo(map)
+		
+	L.marker([32.39515, -64.903483]).bindPopup('Name: Stonewall, Built: 17th Century, Length: NA, Maximum Depth: 16.3 feet (5 meters), sunk: NA, Coordinates: (32.39515, -64.903483)').addTo(map)
+		
+	L.marker([32.414084, -64.85171]).bindPopup('Name: Superior, Built: NA, Length: NA, Maximum Depth: NA, sunk: 1837, Coordinates: (32.414084, -64.85171)').addTo(map)
+			
+	L.marker([32.31265, -64.97345]).bindPopup('Name: Verdad Deck, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.31265, -64.97345)').addTo(map)
+		
+	L.marker([32.3126, -64.973967]).bindPopup('Name: Verdad Keel, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.3126, -64.973967)').addTo(map)
+		
+	L.marker([32.259267, -64.98165]).bindPopup('Name: Caesar: Built, NA, Length: NA, Maximum Depth: NA, sunk: 1818, Coordinates: (32.259267, -64.98165').addTo(map)
+		
+	L.marker([32.276188, -64.802994]).bindPopup('Name: Case Gin Wreck, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.276188, -64.802994)').addTo(map)
+		
+	L.marker([32.475799, -64.769468]).bindPopup('Name: Crystal Catfish, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.475799, -64.769468)').addTo(map)
+			
+	L.marker([32.337147, -64.669757]).bindPopup('Name: HMS Cerebus: Built, NA, Length: NA, Maximum Depth: NA, sunk: 1783, Coordinates: (32.337147, -64.669757)').addTo(map)
+		
+	L.marker([32.4830333, -64.7049]).bindPopup('Name: Taunton, Built: 1902 in Copenhagen, Length: 228 feet (69.5 meters), Maximum Depth: 40 feet (12.2 meters), sunk: November 1920, Coordinates: (32.4830333, -64.7049)').addTo(map)
+		
+	L.marker([32.474798, -64.768893]).bindPopup('Name: WB Smith Tug, Built: NA, Length: NA, Maximum Depth: NA, sunk: NA, Coordinates: (32.474798, -64.768893)').addTo(map)
+			
+    </script>
+</body>
+</html>
